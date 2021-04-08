@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Lab9
@@ -21,6 +16,10 @@ namespace Lab9
             OnClear(this, null);
         }
 
+        void Button_Click(object sender, EventArgs e)
+        {
+
+        }
         void OnSelectNumber(object sender, EventArgs e)
         {
             Button button = (Button)sender;
@@ -50,6 +49,20 @@ namespace Lab9
             }
         }
 
+        void OnChangeSymbol(object sender, EventArgs e)
+        {
+            if (currentState == 1)
+            {
+                firstNumber = - firstNumber;
+            }
+            else
+            {
+                secondNumber = - secondNumber;
+            }
+            //this.resultText.Text = this.resultText.Text;
+
+
+        }
         void OnSelectOperator(object sender, EventArgs e)
         {
             currentState = -2;
